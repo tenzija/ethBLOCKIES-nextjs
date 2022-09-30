@@ -58,7 +58,7 @@ export default function Mint() {
 
                                 {/* Mint button */}
                                 <button className="font-mono mt-12 w-full bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid shadow-lg px-6 py-3 rounded-md text-2xl text-black hover:shadow-gray-400/50 mx-4 tracking-wide">
-                                    connect WAllet
+                                    <b>connect WAllet</b>
                                 </button>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ export default function Mint() {
                         {/* Contract Address */}
                         <div className="border-t border-brand-blue-mid flex flex-col items-center mt-10 py-2 w-full">
                             <h3 className="font-mono text-2xl text-brand-blue-mid mt-6">
-                                contRAct AddRess
+                                <b>contRAct AddRess</b>
                             </h3>
                             <a 
                             href={`https://ropsten.etherscan.io/address/0xF8494aD2A8393944d0e3A12c57423309E48B4A77/`}
