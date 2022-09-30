@@ -7,7 +7,7 @@ import { config } from "../dapp.config"
 export default function Home() {
   return (
     <div 
-      className='min-h-screen h-full w-full flex flex-col bg-brand-light overflow-hidden'
+      className='min-h-screen h-full w-full flex flex-col bg-brand-blue-light overflow-hidden'
     >
       <Head>
         <title>{config.title}</title>
