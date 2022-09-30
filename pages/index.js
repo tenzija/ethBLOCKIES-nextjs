@@ -26,7 +26,7 @@ export default function Home() {
             href="#"
           >
             <a 
-              className='font-mono text-xl md:text-3xl font-bold'
+              className='font-mono text-xl md:text-3xl font-bold border-t border-b border-brand-purple-dark pt-1 pb-1'
             >
               <span
                 className='bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid pl-2 bg-clip-text text-transparent'
