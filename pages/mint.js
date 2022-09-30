@@ -76,7 +76,7 @@ export default function Mint() {
                                 contRAct AddRess
                             </h3>
                             <a 
-                            href={`https://rinkeby.etherscan.io/address/0xF8494aD2A8393944d0e3A12c57423309E48B4A77/`}
+                            href={`https://ropsten.etherscan.io/address/0xF8494aD2A8393944d0e3A12c57423309E48B4A77/`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-brand-blue-mid mt-4">
