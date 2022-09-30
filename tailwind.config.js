@@ -18,6 +18,9 @@ module.exports = {
         "brand-blue-mid" : "var(--clr-blue-mid)",
         "brand-blue-light" : "var(--clr-blue-light)",
         "brand-light" : "var(--clr-light)",
+      },
+      animation: {
+        "pulse-slow": "pulse 10s linear infinite",
       }
     },
   },
