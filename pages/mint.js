@@ -21,7 +21,7 @@ export default function Mint() {
                                         </span> / 2222
                                     </p>
                                 </div>
-                                <img src="/images/16.png" className="object-cover w-full sm:h-[280px] md:w-[280px] rounded-md"/>
+                                <img src="/images/auto.png" className="object-cover w-full sm:h-[280px] md:w-[280px] rounded-md"/>
                             </div>
                             <div className="flex flex-col items-center w-full px-4 mt-16 md:mt-0">
                                 <div className="font-mono flex items-center justify-between w-full">
