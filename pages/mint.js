@@ -9,7 +9,7 @@ export default function Mint() {
                         <h1 className="font-mono  font-bold text-3xl md:text-4xl bg-gradient-to-br  from-brand-purple-dark to-brand-blue-mid bg-clip-text text-transparent mt-3 mb-3">
                             pRe-sAle
                         </h1>
-                        <h3 className="text-sm text-brand-blue-mid tracking-widest">
+                        <h3 className="text-sm text-brand-blue-mid tracking-widest break-all ...">
                             0xF8494aD2A8393944d0e3A12c57423309E48B4A77 
                         </h3>
                         <div className="flex flex-col md:flex-row md:space-x-14 w-full mt-10 md:mt-14">
