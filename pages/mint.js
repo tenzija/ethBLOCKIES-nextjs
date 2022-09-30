@@ -47,10 +47,10 @@ export default function Mint() {
                                         <p>totAl</p>
                                         <div className="flex items-center space-x-3">
                                             <p>
-                                                0.01 eth
+                                                <b>0.01 eth</b>
                                             </p>
                                             <span className="text-brand-purple-mid">
-                                                + gAs
+                                                + <b>gAs</b>
                                             </span>
                                         </div>
                                     </div>
