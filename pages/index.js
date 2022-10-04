@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/2.png" />
       </Head>
 
       <header
