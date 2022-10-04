@@ -24,7 +24,7 @@ html {
 
 .mintBG{
     background: 
-        linear-gradient(90deg, #B298DC, #B8D0EB, #B298DC);
+        linear-gradient(90deg, #A663CC, #B8D0EB, #A663CC);
     animation: gradientBG 10s ease infinite;
     background-size: 250% 250%;
 }
