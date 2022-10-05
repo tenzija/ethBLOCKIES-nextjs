@@ -1,16 +1,55 @@
+import { useState, useEffect } from 'react'
+import { initOnboard } from "../utils/onboard"
+
 export default function Mint() {
+
+    const [onboard, setOnboard] = useState(null)
+    const [walletAddress, setWalletAddress] = useState('')
+
+    useEffect(() => {
+        const onboardData = initOnboard({
+            address: address => setWalletAddress(address ? address : ''),
+            wallet: wallet => {
+                if(wallet.provider) {
+                    window.localStorage.setItem('selectedWallet', wallet.name)
+                } else {
+                    window.localStorage.removeItem('selectedWallet')
+                }
+            }
+        })
+
+        setOnboard(onboardData)
+    }, [])
+
+    const previouslySelectedWallet = typeof window != 'undefined' && window.localStorage.getItem('selectedWallet')
+
+    useEffect(() => {
+        if(previouslySelectedWallet != null && onboard) {
+            onboard.walletSelect(previouslySelectedWallet)
+        }
+    }, [onboard, previouslySelectedWallet])
+
+    const connectWalletHandler = async() => {
+        const walletSelected = await onboard.walletSelect()
+        if(walletSelected) {
+            await onboard.walletCheck()
+            window.location.reload(true)
+        }
+    }
     
     return(
         <div className="min-h-screen h-full -w-full overflow-hidden flex flex-col items-center justify-center bg-brand-background">
             <div className="relative w-full h-full- flex flex-col items-center justify-center">
-                <img className="absolute mintBG inset-auto block w-full h-full min-h-screen object-cover animate-pulse"/>
-                <div className="flex flex-col items-center justify-center h-full w-full px-2 md:px-10">
+                <img className="absolute mintBG inset-auto block w-full h-full object-cover animate-pulse"/>
+                
+                <div className="flex flex-col items-center justify-center mt-8 mb-8 min-h-screen w-full px-2 md:px-10">
                     <div className="z-1 md:max-w-3xl w-full bg-gray-900/90 filter backdrop-blur-sm py-4 rounded-md px-2 md:px-10 flex flex-col items-center">
                         <h1 className="font-mono  font-bold text-3xl md:text-4xl bg-gradient-to-br  from-brand-purple-dark to-brand-blue-mid bg-clip-text text-transparent mt-3 mb-3">
                             pRe-sAle
                         </h1>
                         <h3 className="text-sm text-brand-blue-mid tracking-widest break-all ...">
-                            0xF8494aD2A8393944d0e3A12c57423309E48B4A77 
+                            {walletAddress
+                            ? walletAddress : ''} 
                         </h3>
                         <div className="flex flex-col md:flex-row md:space-x-14 w-full mt-10 md:mt-14">
                             <div className="relative w-full">
@@ -42,7 +81,7 @@ export default function Mint() {
                                 <p className="text-sm text-brand-blue-mid tracking-widest mt-3">
                                     Max Mint Amount: 5
                                 </p>
-                                <div className="border-t border-b py-4 mt-16 w-full border-brand-purple-mid">
+                                <div className="border-t border-b py-4 mt-10 w-full border-brand-purple-mid">
                                     <div className="w-full text-xl font-mono flex items-center justify-between text-brand-blue-mid">
                                         <p>totAl</p>
                                         <div className="flex items-center space-x-3">
@@ -56,10 +95,16 @@ export default function Mint() {
                                     </div>
                                 </div>
 
-                                {/* Mint button */}
-                                <button className="font-mono mt-12 w-full bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid shadow-lg px-6 py-3 rounded-md text-2xl text-black hover:shadow-gray-400/50 mx-4 tracking-wide">
+                                {/* Mint button && wallet connect button */}
+                                { walletAddress ? (<button className="font-mono mt-7 w-full bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid shadow-lg px-6 py-3 rounded-md text-2xl text-black hover:shadow-gray-400/50 mx-4 tracking-wide"
+                                >
+                                    <b>Mint</b>
+                                </button>) : (<button className="font-mono mt-7 w-full bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid shadow-lg px-6 py-3 rounded-md text-2xl text-black hover:shadow-gray-400/50 mx-4 tracking-wide"
+                                onClick={connectWalletHandler}
+                                >
                                     <b>connect WAllet</b>
-                                </button>
+                                </button>)}
+                                
                             </div>
                         </div>
                         
