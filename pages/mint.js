@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { initOnboard } from "../utils/onboard"
+import { config } from '../dapp.config'
 
 export default function Mint() {
 
@@ -116,17 +117,17 @@ export default function Mint() {
                         </div>
 
                         {/* Contract Address */}
-                        <div className="border-t border-brand-blue-mid flex flex-col items-center mt-10 py-2 w-full">
+                        <div className="border-t border-brand-blue-mid flex flex-col items-center mt-8 py-2 w-full">
                             <h3 className="font-mono text-2xl text-brand-blue-mid mt-6">
                                 <b>contRAct AddRess</b>
                             </h3>
                             <a 
-                            href={`https://ropsten.etherscan.io/address/0xF8494aD2A8393944d0e3A12c57423309E48B4A77/`}
+                            href={`https://goerli.etherscan.io/address/${config.contractAddress}#readContract`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-brand-blue-mid mt-4">
                                 <span className="text-center break-all ...">
-                                    0xF8494aD2A8393944d0e3A12c57423309E48B4A77
+                                    {config.contractAddress}
                                 </span>
                             </a>
                         </div>
