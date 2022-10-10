@@ -126,7 +126,7 @@ export default function Mint() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-brand-blue-mid mt-4">
-                                <span className="text-center break-all ...">
+                                <span className="text-center items-center break-all ...">
                                     {config.contractAddress}
                                 </span>
                             </a>
