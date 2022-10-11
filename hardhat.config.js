@@ -1,12 +1,12 @@
 require('dotenv').config()
+require('@nomiclabs/hardhat-etherscan')
 require("@nomiclabs/hardhat-waffle");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   defaultNetwork: "goerli",
   networks: {
-    hardhat: {
-    },
+    hardhat: {},
     goerli: {
       url: `${process.env.NEXT_PUBLIC_ALCHEMY_RPC_URL}`,
       accounts: [`0x${process.env.METAMASK_PRIVATE_KEY}`]
@@ -31,6 +31,6 @@ module.exports = {
     timeout: 40000
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
+    apiKey: `${process.env.ETHERSCAN_API_KEY}`
   }
 }

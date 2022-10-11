@@ -20,7 +20,7 @@ async function main() {
   await ethBLOCKIE.deployed()
 
   console.log('ethBLOCKIE deployed to: ', ethBLOCKIE.address)
-  // ethBLOCKIES goerli address: 0x45c53A0B7fdFe6115c6D9C6590d33EC48E1FABd0
+  // ethBLOCKIES goerli address: 0x8cB18Fd417c8CcA256D227B594e0a2E20947B272
 }
 
 

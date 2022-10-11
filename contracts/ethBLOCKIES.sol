@@ -248,6 +248,3 @@ contract OwnableDelegateProxy {}
 contract ProxyRegistry {
     mapping(address => OwnableDelegateProxy) public proxies;
 }
-
-
-

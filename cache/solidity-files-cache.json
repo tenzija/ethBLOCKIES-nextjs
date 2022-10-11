@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\contracts\\ethBLOCKIES.sol": {
-      "lastModificationDate": 1665061053170,
-      "contentHash": "2715a989a3d9bc113d16b677691093a8",
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\contracts\\ethBLOCKIES.sol": {
+      "lastModificationDate": 1665491044231,
+      "contentHash": "db1dcfbb50aa92c18623dc0b09d1dbc6",
       "sourceName": "contracts/ethBLOCKIES.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -46,10 +46,10 @@
         "ethBLOCKIE"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Counters.sol": {
-      "lastModificationDate": 1664899738580,
-      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
-      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\security\\ReentrancyGuard.sol": {
+      "lastModificationDate": 1665419052107,
+      "contentHash": "92f9448b23a90ea3bb932ee55cc3ccce",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -78,11 +78,11 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "Counters"
+        "ReentrancyGuard"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\finance\\PaymentSplitter.sol": {
-      "lastModificationDate": 1664899750423,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\finance\\PaymentSplitter.sol": {
+      "lastModificationDate": 1665419051999,
       "contentHash": "4303d2719c98f9ba1763d56bacbde16f",
       "sourceName": "@openzeppelin/contracts/finance/PaymentSplitter.sol",
       "solcConfig": {
@@ -120,8 +120,8 @@
         "PaymentSplitter"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
-      "lastModificationDate": 1664899750291,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1665419051927,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -157,8 +157,8 @@
         "Ownable"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
-      "lastModificationDate": 1664899743462,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1665419048866,
       "contentHash": "79ff1a7eb801a525aa315fb7a679eede",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
@@ -200,8 +200,8 @@
         "ERC721"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
-      "lastModificationDate": 1664899751103,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1665419052682,
       "contentHash": "cf46906c4035f51639a22265066a9e78",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -235,8 +235,43 @@
         "Strings"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\cryptography\\MerkleProof.sol": {
-      "lastModificationDate": 1664899749996,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Counters.sol": {
+      "lastModificationDate": 1665419045559,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\cryptography\\MerkleProof.sol": {
+      "lastModificationDate": 1665419051847,
       "contentHash": "04d20a7656ab3b219a40d6dad3669ab5",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol",
       "solcConfig": {
@@ -270,43 +305,8 @@
         "MerkleProof"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\security\\ReentrancyGuard.sol": {
-      "lastModificationDate": 1664899750620,
-      "contentHash": "92f9448b23a90ea3bb932ee55cc3ccce",
-      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ReentrancyGuard"
-      ]
-    },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
-      "lastModificationDate": 1664899737671,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1665419044635,
       "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
@@ -340,8 +340,8 @@
         "Address"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
-      "lastModificationDate": 1664899738497,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1665419045531,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -375,8 +375,8 @@
         "Context"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\utils\\SafeERC20.sol": {
-      "lastModificationDate": 1664899750814,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\utils\\SafeERC20.sol": {
+      "lastModificationDate": 1665419052449,
       "contentHash": "3a843b05b85a270e9455e3d2e804e633",
       "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
       "solcConfig": {
@@ -414,8 +414,8 @@
         "SafeERC20"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
-      "lastModificationDate": 1664899747160,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
+      "lastModificationDate": 1665419050738,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -449,8 +449,8 @@
         "IERC20"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\draft-IERC20Permit.sol": {
-      "lastModificationDate": 1664899740199,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\draft-IERC20Permit.sol": {
+      "lastModificationDate": 1665419046488,
       "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
       "solcConfig": {
@@ -484,8 +484,8 @@
         "IERC20Permit"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
-      "lastModificationDate": 1664899747580,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1665419051130,
       "contentHash": "ec99d946db3685a3630554aa6055bd7f",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
       "solcConfig": {
@@ -521,8 +521,8 @@
         "IERC721"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
-      "lastModificationDate": 1664899748081,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1665419051267,
       "contentHash": "c22d4395e33763de693fd440c6fd10e1",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
@@ -556,8 +556,8 @@
         "IERC721Receiver"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
-      "lastModificationDate": 1664899741497,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1665419047590,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -593,8 +593,8 @@
         "ERC165"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
-      "lastModificationDate": 1664899747921,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
+      "lastModificationDate": 1665419051222,
       "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
@@ -630,8 +630,8 @@
         "IERC721Metadata"
       ]
     },
-    "C:\\Projekti\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
-      "lastModificationDate": 1664899746689,
+    "C:\\Work\\Code\\ethBLOCKIES-nextjs-main\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1665419050582,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
