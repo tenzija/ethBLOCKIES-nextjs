@@ -51,4 +51,33 @@ export const presaleMint = async(mintAmount) => {
             status: 'To be able to mint, you need to be connected with your wallet'
         }
     }
+
+    const leaf = keccak256(window.ethereum.selectedAddress)
+    const proof = merkleTree.getHexProof(leaf)
+
+    // verify merkle proof
+    const isValid = merkleTree.verify(proof, leaf, root)
+
+    if(!isValid) {
+        return {
+            success: false,
+            status: 'Invalid Merkle Proof - You are not on the whitelist'
+        }
+    }
+
+    const nonce = await web3.eth.getTransactionCount(
+        window.ethereum.selectedAddress, 
+        'latest'
+    )
+
+    // setup our eth transaction 
+    const tx = {
+        to: config.contractAddress, // contract address
+        from: window.ethereum.selectedAddress,
+        value: parseInt(
+            web3.utils.toWei(config.price * mintAmount, 'ether')
+        ).toString(16), // hex
+        gas: String(300000 * mintAmount),
+        nonce: nonce.toString(16)
+    }
 }
