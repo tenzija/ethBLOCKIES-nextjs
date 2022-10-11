@@ -6,7 +6,8 @@ import {
     getMaxSupply,
     isPausedState,
     isPreSaleState,
-    isPublicSaleState
+    isPublicSaleState,
+    presaleMint
 } from '../utils/interact'
 
 export default function Mint() {
@@ -20,6 +21,7 @@ export default function Mint() {
 
     const [status, setStatus] = useState(null)
     const [mintAmount, setMintAmount] = useState(1)
+    const [isMinting, setIsMinting] = useState(false)
     const [onboard, setOnboard] = useState(null)
     const [walletAddress, setWalletAddress] = useState('')
 
@@ -80,6 +82,23 @@ export default function Mint() {
         if (mintAmount > 1) {
             setMintAmount(mintAmount - 1)
         }
+    }
+
+    const presaleMintHandler = async() => {
+        setIsMinting(true)
+
+        const { success, status } = await presaleMint(mintAmount)
+
+        setStatus({
+            success,
+            message: status
+        })
+
+        setIsMinting(false)
+    }
+
+    const publicMintHandler = async() => {
+        
     }
     
     return(
@@ -145,9 +164,11 @@ export default function Mint() {
                                 </div>
 
                                 {/* Mint button && wallet connect button */}
-                                { walletAddress ? (<button className="font-mono mt-7 w-full bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid shadow-lg px-6 py-3 rounded-md text-2xl text-black hover:shadow-gray-400/50 mx-4 tracking-wide"
+                                { walletAddress ? (<button className={`${paused || isMinting ? 'bg-gradient-to-br from-brand-blue-mid  to-brand-purple-dark cursor-not-allowed' : 'bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid shadow-lg hover:shadow-gray-400/50'} px-6 py-3 rounded-md text-2xl text-black font-mono mt-7 w-full mx-4 tracking-wide`}
+                                disabled={paused || isMinting}
+                                onClick={isPreSale ? presaleMintHandler : publicMintHandler}
                                 >
-                                    <b>Mint</b>
+                                    <b>{isMinting ? 'MintinG ...' : 'Mint'}</b>
                                 </button>) : (<button className="font-mono mt-7 w-full bg-gradient-to-br from-brand-purple-dark to-brand-blue-mid shadow-lg px-6 py-3 rounded-md text-2xl text-black hover:shadow-gray-400/50 mx-4 tracking-wide"
                                 onClick={connectWalletHandler}
                                 >
@@ -160,9 +181,9 @@ export default function Mint() {
                         {/* Status */}
                         {
                             status && (
-                                <div className={`border ${status.success ? 'border-brand-blue-light' : 'border-brand-purple-dark'}  rounded-md text-start h-full px-4 py-4 w-full mx-auto mt-8 md:mt-4`}>
-                                    <p className={`flex flex-col space-y-2 ${status.success ? 'text-brand-blue-light' : 'text-brand-purple-dark'} text-sm text-center md:text-base break-words ...`}>
-                                        something went wrong
+                                <div className={`border ${status.success ? 'border-brand-blue-mid' : 'border-brand-purple-mid'}  rounded-md text-start h-full px-4 py-4 w-full mx-auto mt-8 md:mt-4`}>
+                                    <p className={`flex flex-col space-y-2 ${status.success ? 'text-brand-blue-mid' : 'text-brand-purple-mid'} text-sm text-center md:text-base break-words ...`}>
+                                        {status.message}
                                     </p>
                                 </div>
                             )

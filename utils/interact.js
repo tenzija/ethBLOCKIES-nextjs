@@ -75,9 +75,36 @@ export const presaleMint = async(mintAmount) => {
         to: config.contractAddress, // contract address
         from: window.ethereum.selectedAddress,
         value: parseInt(
-            web3.utils.toWei(config.price * mintAmount, 'ether')
+            web3.utils.toWei(String(config.price * mintAmount), 'ether')
         ).toString(16), // hex
         gas: String(300000 * mintAmount),
+        data: nftContract.methods.presaleMint(window.ethereum.selectedAddress, mintAmount, proof).encodeABI(),
         nonce: nonce.toString(16)
+    }
+
+    try {
+        const txHash = await window.ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [tx]
+        })
+
+        return {
+            success: true,
+            status: (
+                <a href={`https://goerli.etherscan.io/tx/${txHash}`} target='_blank'> 
+                    <p>
+                        ✔️ Check out your transaction on Etherscan:
+                    </p>
+                    <p>
+                        {`https://goerli.etherscan.io/tx/${txHash}`}
+                    </p>
+                </a>
+            )
+        }
+    } catch(error) {
+        return {
+            success: false,
+            status: '😔 Something went wrong: ' + error.message
+        }
     }
 }
