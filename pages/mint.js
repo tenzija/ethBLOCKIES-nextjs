@@ -7,7 +7,8 @@ import {
     isPausedState,
     isPreSaleState,
     isPublicSaleState,
-    presaleMint
+    presaleMint,
+    publicMint
 } from '../utils/interact'
 
 export default function Mint() {
@@ -98,7 +99,16 @@ export default function Mint() {
     }
 
     const publicMintHandler = async() => {
-        
+        setIsMinting(true)
+
+        const { success, status } = await publicMint(mintAmount)
+
+        setStatus({
+            success,
+            message: status
+        })
+
+        setIsMinting(false)
     }
     
     return(
