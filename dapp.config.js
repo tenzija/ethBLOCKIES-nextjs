@@ -5,8 +5,8 @@ const config = {
     title: "ethBLOCKIES // Dapp",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non tempus neque, non dignissim ipsum. Quisque ac elit fringilla, sollicitudin diam id, dictum velit. Praesent volutpat urna mauris, eget auctor risus tristique fringilla.",
     contractAddress: '0x5769e82fa8c91aB085684Dc0A1057F1fB356BDCe',
-    presaleMaxMintAmount: 3,
-    maxMintAmount: 5,
+    presaleMaxMintAmount: 5,
+    maxMintAmount: 10,
     price: 0.01
 }
 
