@@ -4,7 +4,7 @@ const RPC_URL = process.env.NEXT_PUBLIC_ALCHEMY_RPC_URL
 const config = {
     title: "ethBLOCKIES // Dapp",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non tempus neque, non dignissim ipsum. Quisque ac elit fringilla, sollicitudin diam id, dictum velit. Praesent volutpat urna mauris, eget auctor risus tristique fringilla.",
-    contractAddress: '0x5769e82fa8c91aB085684Dc0A1057F1fB356BDCe',
+    contractAddress: '0xB92cEe2abB53DF947A8fc85fbEC23d2a75028d3D',
     presaleMaxMintAmount: 5,
     maxMintAmount: 10,
     price: 0.01

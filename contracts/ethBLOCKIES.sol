@@ -33,7 +33,7 @@ contract ethBLOCKIE is
     bool public presaleM = false;
     bool public publicM = false;
 
-    uint256 presaleAmountLimit = 3;
+    uint256 presaleAmountLimit = 5;
     mapping(address => uint256) public _presaleClaimed;
 
     uint256 _price = 10000000000000000; // 0.01 ETH
