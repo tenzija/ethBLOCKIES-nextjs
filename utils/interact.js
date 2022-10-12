@@ -108,3 +108,55 @@ export const presaleMint = async(mintAmount) => {
         }
     }
 }
+
+export const publicMint = async(mintAmount) => {
+    if(!window.ethereum.selectedAddress) {
+        return {
+            success: false,
+            status: 'To be able to mint, you need to be connected with your wallet'
+        }
+    }
+
+    const nonce = await web3.eth.getTransactionCount(
+        window.ethereum.selectedAddress, 
+        'latest'
+    )
+
+    // setup our eth transaction 
+    const tx = {
+        to: config.contractAddress, // contract address
+        from: window.ethereum.selectedAddress,
+        value: parseInt(
+            web3.utils.toWei(String(config.price * mintAmount), 'ether')
+        ).toString(16), // hex
+        gas: String(300000 * mintAmount),
+        data: nftContract.methods.publicSaleMint(mintAmount).encodeABI(),
+        nonce: nonce.toString(16)
+    }
+
+    try {
+        const txHash = await window.ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [tx]
+        })
+
+        return {
+            success: true,
+            status: (
+                <a href={`https://goerli.etherscan.io/tx/${txHash}`} target='_blank'> 
+                    <p>
+                        ✔️ Check out your transaction on Etherscan:
+                    </p>
+                    <p>
+                        {`https://goerli.etherscan.io/tx/${txHash}`}
+                    </p>
+                </a>
+            )
+        }
+    } catch(error) {
+        return {
+            success: false,
+            status: '😔 Something went wrong: ' + error.message
+        }
+    }
+}
