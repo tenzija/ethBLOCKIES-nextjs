@@ -42,9 +42,9 @@ contract ethBLOCKIE is
 
     uint256[] private _teamShares = [25, 35, 40]; // 3 PEOPLE IN THE TEAM
     address[] private _team = [
-        0xE2e41c619a4449671f23C44610BB3E83AdfDc80D, // Admin Account gets 25% of the total revenue
-        0xE28556E8b63172b005913C91b13bF8DC49d61891, // Test Account gets 35% of the total revenue
-        0x4Aaaab8812e6A0e44f8544b944A42a7B89607A16 // VIP Account gets 40% of the total revenue
+        0x72C2Ed1B361bCaf98daC7Be537039ec6F733e301, // Admin Account gets 25% of the total revenue
+        0x720a4e5AC7ceAa5DeF388D22076c65d17d6e622b, // Test Account gets 35% of the total revenue
+        0x15C8F93c4C0e93972c819bAea9397A77a2F3D8E1 // VIP Account gets 40% of the total revenue
     ];
 
     constructor(string memory uri, bytes32 merkleroot, address _proxyRegistryAddress)

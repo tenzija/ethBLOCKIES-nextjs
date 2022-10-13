@@ -14,7 +14,7 @@ async function main() {
   const root = merkleTree.getRoot()
 
   await hre.run("verify:verify", {
-    address: '0xB92cEe2abB53DF947A8fc85fbEC23d2a75028d3D',
+    address: '0x8AA6A202E5591d44D7cC5de573565FaBAe18e5C7',
     constructorArguments: [
         BASE_URI,
         root,
